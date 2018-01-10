@@ -1,0 +1,29 @@
+{{#partial "content"}}
+
+
+    <h1>Add a new place!</h1>
+
+    <form action="/places/new" method="post">
+        <label for="name">Place name</label>
+        <input id="name" name="name" type="text">
+
+        <label for="weather">Weather</label>
+        <input id="weather" name="weather" type="text">
+
+        <label for="stayLength">Length of Stay</label>
+        <input id="stayLength" name="stayLength" type="text">
+
+        <label for="grade">Grade your stay</label>
+        <select class="form-control" id="grade">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+    </select>
+        <button type="submit" class="btn btn-default">Go!</button>
+    </form>
+
+    {{/partial}}
+
+    {{> layout.hbs}}
