@@ -14,6 +14,7 @@ public class PlaceTest {
 
     @After
     public void tearDown() throws Exception {
+        //Place.clearAllPlaces();
 
     }
 
@@ -21,6 +22,19 @@ public class PlaceTest {
     public void NewPlaceObjectInstantiatesCorrectly_true() throws Exception {
         Place newPlace = setupNewPlace();
         assertEquals(true, newPlace instanceof Place);
+    }
+
+    @Test
+    public void newPlace_getName_String() {
+        Place newPlace = setupNewPlace();
+        assertEquals("The Moon", newPlace.getName());
+    }
+
+    @Test
+    public void newPlaces_correctlyReturned_true() {
+        Place newPlace = setupNewPlace();
+        Place otherPlace = new Place("Antarctica");
+        assertEquals(2, Place.getAll().size());
     }
 
 //    helper method
